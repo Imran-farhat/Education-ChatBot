@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 EduBot AI - Your Nature-Inspired Educational Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" onclick="startNewChat()">
+                    <i class="fas fa-plus"></i>
+                    New Chat
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="chat-history" id="chat-history">
+                    <!-- Chat history will be populated here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fas fa-seedling"></i>
+                    🌿 EduBot AI
+                    <span class="model-indicator">Nature-Inspired Learning</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="welcome-screen" id="welcome-screen">
+                    <h1 class="welcome-title">🌿 Welcome to EduBot AI 🌿</h1>
+                    <p class="welcome-subtitle">Your nature-inspired educational assistant powered by advanced AI. Ask questions, get explanations, solve problems, and grow your knowledge naturally!</p>
+                    
+                    <div class="example-prompts">
+                        <div class="example-prompt" onclick="useExample('Explain quantum physics in simple terms')">
+                            <div class="example-prompt-title">
+                                <i class="fas fa-atom"></i>
+                                Science & Physics
+                            </div>
+                            <div class="example-prompt-desc">Explain quantum physics in simple terms</div>
+                        </div>
+                        
+                        <div class="example-prompt" onclick="useExample('Solve this calculus problem: ∫x²dx')">
+                            <div class="example-prompt-title">
+                                <i class="fas fa-calculator"></i>
+                                Mathematics
+                            </div>
+                            <div class="example-prompt-desc">Solve this calculus problem: ∫x²dx</div>
+                        </div>
+                        
+                        <div class="example-prompt" onclick="useExample('What were the causes of World War I?')">
+                            <div class="example-prompt-title">
+                                <i class="fas fa-landmark"></i>
+                                History
+                            </div>
+                            <div class="example-prompt-desc">What were the causes of World War I?</div>
+                        </div>
+                        
+                        <div class="example-prompt" onclick="useExample('Analyze the themes in Romeo and Juliet')">
+                            <div class="example-prompt-title">
+                                <i class="fas fa-book"></i>
+                                Literature
+                            </div>
+                            <div class="example-prompt-desc">Analyze the themes in Romeo and Juliet</div>
+                        </div>
+                        
+                        <div class="example-prompt" onclick="useExample('Explain machine learning algorithms')">
+                            <div class="example-prompt-title">
+                                <i class="fas fa-robot"></i>
+                                Computer Science
+                            </div>
+                            <div class="example-prompt-desc">Explain machine learning algorithms</div>
+                        </div>
+                        
+                        <div class="example-prompt" onclick="useExample('How does photosynthesis work?')">
+                            <div class="example-prompt-title">
+                                <i class="fas fa-seedling"></i>
+                                Biology
+                            </div>
+                            <div class="example-prompt-desc">How does photosynthesis work?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <div class="quick-actions" id="quick-actions">
+                        <div class="quick-action" onclick="insertText('Explain this concept:')">
+                            <i class="fas fa-lightbulb"></i>
+                            Explain
+                        </div>
+                        <div class="quick-action" onclick="insertText('Solve this problem:')">
+                            <i class="fas fa-calculator"></i>
+                            Solve
+                        </div>
+                        <div class="quick-action" onclick="insertText('Analyze this:')">
+                            <i class="fas fa-search"></i>
+                            Analyze
+                        </div>
+                        <div class="quick-action" onclick="insertText('Compare and contrast:')">
+                            <i class="fas fa-balance-scale"></i>
+                            Compare
+                        </div>
+                    </div>
+                    
+                    <textarea 
+                        class="message-input" 
+                        id="message-input" 
+                        placeholder="Message EduBot AI..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-button" id="send-button" onclick="sendMessage()" title="Send message">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
