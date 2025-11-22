@@ -1,4 +1,4 @@
-# � EduBot Pro - AI Educational Assistant
+# EduBot Pro - AI Educational Assistant
 
 **Your intelligent educational companion powered by Google Gemini AI with stunning dark theme and advanced NLTK text processing!**
 
